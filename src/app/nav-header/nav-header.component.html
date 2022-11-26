@@ -1,11 +1,11 @@
 <header>
     <nav>
-        <a>Home</a>
-        <a>About Us</a>
-        <a>Menu</a>
-        <a>Make Reservation</a>
+        <a routerLink="/">Home</a>
+        <a routerLink="/about-us">About Us</a>
+        <a routerLink="/menu">Menu</a>
+        <a routerLink="/reservation">Make Reservation</a>
     </nav>
-    <div [className]="'header-image'">
+    <div [className]="'header-image'" routerLink="/">
         <div [className]="'header-title'">
             Food Restaurant
         </div>
