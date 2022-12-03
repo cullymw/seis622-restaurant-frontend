@@ -1,0 +1,33 @@
+.menu-nav {
+    margin: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    text-align: center;
+
+    .menu-nav-link {
+        border: 1px solid black;
+    }
+
+    .menu-nav-link:hover {
+        border: 1px solid red;
+        cursor: pointer;
+    }
+}
+
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.menu-listing {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.5rem;
+
+    .menu-item {
+        border: 1px solid black;
+        text-align: center;
+    }
+}
