@@ -1,1 +1,24 @@
-<h1>Menu component goes here</h1>
+<section class="menu-nav">
+    <div routerLink="/menu/breakfast" class="menu-nav-link">
+        <p>BreakFast</p>
+    </div>
+    <div routerLink="/menu/lunch" class="menu-nav-link">
+        <p>Lunch</p>
+    </div>
+    <div routerLink="/menu/dinner" class="menu-nav-link">
+        <p>Dinner</p>
+    </div>
+</section>
+<section *ngIf="!dataLoading" class="menu-display">
+    <h1>{{ viewTitle }}</h1>
+    <div class="menu-listing">
+        <div *ngFor="let item of displayMenu" class="menu-item">
+            <p>{{ item.name }}</p>
+            <p>{{ item.cost }}</p>
+            <p>{{ item.description }}</p>
+        </div>
+    </div>
+</section>
+<section *ngIf="dataLoading" class="loading">
+    <h1>Data loading...</h1>
+</section>
