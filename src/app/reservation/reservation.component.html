@@ -13,13 +13,21 @@
         </table>
     </section>
     <section>
-        <!-- Enter Reservation Details
-        <form #f="ngForm" (ngSubmit)="onSubmit(f)">
-            <input type="text" name="personName" placeholder="Name" />
-            <p> {{selectedReservation.time | date: 'h:mm a EEEE, MMMM d' }}</p>
-            <input type="number" name="partyNumber" min="1" max="{{selectedReservation.number}}"/>
-            <input type="submit" value="Submit Form" />
-        </form> -->
+        Enter Reservation Details<br><br>
+        <span *ngIf="!selectedReservation.time; else reservationSelected">Select a time from the left to make your reservation.</span><br>
+        <ng-template #reservationSelected>
+            <span>Selected time: {{selectedReservation.time | date: 'h:mm a EEEE, MMMM d' }}</span><br><br>
+            <form>
+                <label for="personName">Name for reservation: </label>
+                <input type="text" name="personName" placeholder="Name" /><br>
+                <label for="party">Number of people: </label>
+                <select id="party" name="partyNumber">
+                    <option *ngFor="let num of partyArray" value="{num}">{{ num }}</option>
+                </select><br>
+                <input type="submit" value="Submit Form" />
+            </form>
+        </ng-template>
+            
         <!-- <form class="res-form" #f="ngForm" (ngSubmit)="onFormSubmit(f)">
             <div class="control">
                 <input type="text" name="personName" placeholder="Name" [(ngModel)]="personName" required #nameField="ngModel"  />

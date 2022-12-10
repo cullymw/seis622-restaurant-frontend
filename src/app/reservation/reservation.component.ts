@@ -19,8 +19,9 @@ export class ReservationComponent implements OnInit {
   public dataLoading: boolean = false;
   public personName: string = "";
   public partyNumber: number;
-  public selectedReservation: IReservationItem;
+  public selectedReservation: IReservationItem = {id: 0, name: "", time: "", number: 0};
   saveUnsuccessful: boolean;
+  partyArray: any[];
 
   constructor(
     public route: ActivatedRoute,
@@ -74,12 +75,13 @@ export class ReservationComponent implements OnInit {
 
   public hoveredItem: any;
 
-  public highlightRow(item: { id: any; }) {
+  public highlightRow(item: IReservationItem) {
     this.hoveredItem = item.id
   }
 
-  public clickRow(item: { id: any; }) {
-    this.selectedReservation = item.id;
+  public clickRow(item: IReservationItem) {
+    this.selectedReservation = item;
+    this.partyArray = Array.from(Array(item.number+1),(x,i)=>i);
   }
 
 }
