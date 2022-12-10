@@ -16,7 +16,7 @@
         Enter Reservation Details<br><br>
         <span *ngIf="!selectedReservation.time; else reservationSelected">Select a time from the left to make your reservation.</span><br>
         <ng-template #reservationSelected>
-            <span>Selected time: {{selectedReservation.time | date: 'h:mm a EEEE, MMMM d' }}</span><br><br>
+            <span>Selected time: {{selectedReservation.time | date: 'h:mm a on EEEE, MMMM d' }}</span><br><br>
             <form>
                 <label for="personName">Name for reservation: </label>
                 <input type="text" name="personName" placeholder="Name" /><br>
@@ -27,20 +27,6 @@
                 <input type="submit" value="Submit Form" />
             </form>
         </ng-template>
-            
-        <!-- <form class="res-form" #f="ngForm" (ngSubmit)="onFormSubmit(f)">
-            <div class="control">
-                <input type="text" name="personName" placeholder="Name" [(ngModel)]="personName" required #nameField="ngModel"  />
-                <span *ngIf="!nameField.valid && saveUnsuccessful">Name is required.</span>
-            </div>
-            <div class="control">
-                <p>{{ selectedReservation.time | date: 'h:mm a EEEE, MMMM d'}}</p>
-            </div>
-            <div class="control">
-                <input type="number" name="partyNumber" min="1" max="{{selectedReservation.number}}"/>
-            </div>
-            <input type="submit" value="Submit Form" />
-        </form> -->
     </section>
     <section>
         Confirmed Reservations

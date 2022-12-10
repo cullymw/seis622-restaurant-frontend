@@ -81,7 +81,7 @@ export class ReservationComponent implements OnInit {
 
   public clickRow(item: IReservationItem) {
     this.selectedReservation = item;
-    this.partyArray = Array.from(Array(item.number+1),(x,i)=>i);
+    this.partyArray = Array.from(Array(item.number),(x,i)=>i+1);
   }
 
 }
