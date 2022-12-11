@@ -1,0 +1,113 @@
+
+//Adjusts 3 grid columns on page
+.content {
+    margin: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+
+    section {
+        height: 300px;
+        border: 1px solid black;
+    }
+}
+
+/**** Google-map column styles start  ****/
+
+//Adjusts google-map section
+.container{
+    width: 100%;
+    height: 100%;
+}
+
+
+table{
+    width: 100%;
+    text-align: center;
+}
+/**** Google-map column styles End ****/
+
+.restaurant-hours-block{
+  background-color: rgb(172, 235, 172);
+}
+
+/**** Contact Us column styles start  ****/
+.contact-us-block {
+    background-color:rgb(238, 210, 176);
+    
+}
+
+.form-container #firstName, #subject, #subject-text{
+
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    resize: vertical;
+    margin-left:5px;
+    
+}
+
+.form-container #subject{
+    margin-left: 5px;
+}
+
+.form-container #subject-text{
+    margin-right: 6px;
+    height: 100px;
+    width: 400px;
+    
+}
+
+.form-container #subject-send{
+    margin-right: 6px;
+    height: 40px;
+    width: 80px;
+    margin-left: 140px;
+    padding-right: 125px;
+}
+/**** Contact Us column styles End ****/
+
+
+/**** Special offers column begins  ****/
+
+//Modifies layout of form grid at bottom
+.form-input{
+    border: 1px solid black;
+    margin:20px;
+    padding: 30px 30px 10px 10px;
+    display: inline-block;
+    position: relative;
+    width: 280%;
+    background-color: rgb(238, 210, 176);
+    margin-left:40px;
+    
+}
+
+//Modifies text-fields errors that appear below 
+.test-form>.container-input{
+ 
+    margin-bottom: 20px;
+
+    >span{
+        color: red;
+        margin-left: 20px;
+    }
+}
+
+//Submit button changes to green when highlighted (applies to both submit buttons)
+input[type=submit]:hover {
+    background-color: #5ca260;
+  }
+
+//Modifies on-submit for form
+.container-input{
+    float: left;
+}
+/**** Special offers column begins  ****/
+
+
+
+
