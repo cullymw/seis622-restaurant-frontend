@@ -1,6 +1,6 @@
 <div class="content">
     <section>
-        Select An Available Time
+        <h3>Select An Available Time</h3>
         <table>
             <th>Date</th>
             <th>Time</th>
@@ -13,23 +13,23 @@
         </table>
     </section>
     <section>
-        Enter Reservation Details<br><br>
+        <h3>Enter Reservation Details</h3><br>
         <span *ngIf="!selectedReservation.time; else reservationSelected">Select a time from the left to make your reservation.</span><br>
         <ng-template #reservationSelected>
             <span>Selected time: {{selectedReservation.time | date: 'h:mm a on EEEE, MMMM d' }}</span><br><br>
             <form class="test-form" #f="ngForm" (ngSubmit)="onFormSubmit(f)">
                 <label for="personName">Name for reservation: </label>
-                <input type="text" name="personName" placeholder="Name" [(ngModel)]="personName" required/><br>
+                <input type="text" name="personName" placeholder="Name" [(ngModel)]="personName" required/><br><br>
                 <label for="party">Number of people: </label>
                 <select id="party" name="partyNumber" [(ngModel)]="partyNumber" required>
                     <option *ngFor="let num of partyArray" [value]="num">{{ num }}</option>
-                </select><br>
+                </select><br><br>
                 <input type="submit" value="Submit Form" />
             </form>
         </ng-template>
     </section>
     <section>
-        Confirmed Reservations
+        <h3>Confirmed Reservations</h3>
         <table>
             <th>Name</th>
             <th>Date</th>
@@ -42,5 +42,7 @@
                 <td>{{ item.number }}</td>
             </tr>
         </table>
+        <br>
+        <span>To modify or change your reservation, please call us at </span>
     </section>
 </div>
