@@ -19,9 +19,9 @@
             <span>Selected time: {{selectedReservation.time | date: 'h:mm a on EEEE, MMMM d' }}</span><br><br>
             <form class="test-form" #f="ngForm" (ngSubmit)="onFormSubmit(f)">
                 <label for="personName">Name for reservation: </label>
-                <input type="text" name="personName" placeholder="Name" [(ngModel)]="personName"/><br>
+                <input type="text" name="personName" placeholder="Name" [(ngModel)]="personName" required/><br>
                 <label for="party">Number of people: </label>
-                <select id="party" name="partyNumber" [(ngModel)]="partyNumber">
+                <select id="party" name="partyNumber" [(ngModel)]="partyNumber" required>
                     <option *ngFor="let num of partyArray" [value]="num">{{ num }}</option>
                 </select><br>
                 <input type="submit" value="Submit Form" />

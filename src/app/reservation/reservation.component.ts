@@ -39,6 +39,7 @@ export class ReservationComponent implements OnInit {
         next: (data) => {
           this.availableTimes = data.available;
           this.reservedTimes = data.reservations;
+          this.reservedTimes.sort((a, b) => a.id - b.id);
           this.dataLoading = false;
         },
         error: (err) => {
