@@ -18,7 +18,7 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     AboutUsComponent,
     MenuComponent,
-    ReservationComponent
+    ReservationComponent,
   ],
   imports: [
     BrowserModule,
